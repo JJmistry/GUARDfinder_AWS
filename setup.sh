@@ -3,6 +3,9 @@
 
 sudo yum install epel-release git wget -y
 
+# Clone setup script
+git clone git@github.com:JJmistry/GUARDfinder_AWS.git
+
 # Install C
 #T sudo yum group install "Development Tools" -y
 
