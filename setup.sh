@@ -9,9 +9,12 @@
 # Install C
 #T sudo yum group install "Development Tools" -y
 
- # sudo yum yum install ncurses-devel zlib-devel texinfo gtk+-devel gtk2-devel qt-devel tcl-devel tk-devel kernel-headers kernel-devel readline-devel libcurl-devel -y
+# sudo yum yum install ncurses-devel zlib-devel texinfo gtk+-devel gtk2-devel qt-devel tcl-devel tk-devel kernel-headers kernel-devel readline-devel libcurl-devel -y
 
 # https://stackoverflow.com/questions/37769985/how-to-install-older-r-version-on-centos
+
+# Build dependencies for R 
+sudo yum-builddep R -y
 
 # download specific version of R 
 wget https://cran.r-project.org/src/base/R-3/R-3.3.3.tar.gz
@@ -21,9 +24,6 @@ wget https://cran.r-project.org/src/base/R-3/R-3.3.3.tar.gz
 
 # change to directory
 cd R-3.3.3
-
-# Build dependencies for R 
-sudo yum-builddep R -y
 
 # install
 ./configure; make; sudo make install
